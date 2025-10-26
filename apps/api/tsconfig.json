@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "declaration": true,
@@ -18,8 +15,22 @@
     "skipLibCheck": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "stripInternal": true,
+    "useUnknownInCatchVariables": false
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["src", "test", "*.ts"]
 }

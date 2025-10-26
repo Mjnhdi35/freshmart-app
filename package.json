@@ -5,5 +5,19 @@
   "workspaces": [
     "apps/*",
     "libs/*"
-  ]
+  ],
+  "scripts": {
+    "format": "prettier --write \"{apps,libs}/**/*.{ts,js,vue,json,md}\"",
+    "format:check": "prettier --check \"{apps,libs}/**/*.{ts,js,vue,json,md}\"",
+    "tsc": "nx run-many --target tsc",
+    "lint": "nx run-many --target lint",
+    "build": "nx run-many --target build",
+    "start:api": " yarn workspace @freshmart-app/api build && yarn workspace @freshmart-app/api start",
+    "start:web": "yarn workspace @freshmart-app/web build && yarn workspace @freshmart-app/web start"
+  },
+  "devDependencies": {
+    "nx": "22.0.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
 }
